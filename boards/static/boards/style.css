@@ -1,0 +1,30 @@
+
+#navi {
+	background-color:gray;
+	color: white;
+	text-align:left;
+	width: 75px;
+	height: 300px;
+	float: left;
+	padding: 5px;
+}
+
+#main {
+	/*background-color: green;*/
+	width: 300px;
+	float: left;
+}
+
+#header {
+	background-color: blue;
+	color: white;
+	text-align: left;
+	width: 80%;
+	height: 40px;
+	float: left;
+	padding: 10px;
+}
+
+th {
+	text-align:left;
+}

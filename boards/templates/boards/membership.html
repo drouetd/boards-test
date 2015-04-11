@@ -1,0 +1,31 @@
+{% extends "boards/base.html" %}
+
+{% block main %}
+
+<div id="header">
+<h2>{{person.name}} is a member of these organizations:</h2>
+</div>
+
+<div id="main">
+{% if relationships %}
+    <table style="width:400px">
+        <tr>
+            <th>Org</th>
+            <th>Position</th>
+            <th>Status</th>
+        </tr>
+        {% for rel in relationships %}
+            <tr>
+                <td>{{ rel.organization }}</td>
+                <td>{{ rel.get_role_display }}</td>
+                <td>{{ rel.get_current_display}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% else %}
+    <p>not part of any organization.</p>
+{% endif %}
+</div>
+
+{% endblock main %}

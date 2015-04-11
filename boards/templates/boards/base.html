@@ -1,0 +1,24 @@
+{% load staticfiles %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'boards/style.css' %}" /> 
+    <title> People Test </title>
+    
+</head>
+
+<body>
+    <div id="navi">
+    <br>
+	<a href= "{% url 'polls:index' %}"> Polls</a> <br>
+	<br>
+	<a href= "{% url 'boards:index' %}"> Boards</a>
+	</div>
+
+
+    {% block main %}
+    This text should be replaced by child templates.
+    {% endblock main %}
+
+</body>
+
+

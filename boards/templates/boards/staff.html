@@ -1,0 +1,21 @@
+{% extends "boards/base.html" %}
+
+{% block main %}
+
+<div id="header">
+<h2>Staff of {{ org_name }}</h2>
+</div>
+
+<div id="main">
+{% if staff_list %}
+    <ul>
+    {% for staff in staff_list %}
+        <li><a href= "{% url 'boards:memberships' staff.id %}"> {{ staff.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>no staff for Ajah.</p>
+{% endif %}
+</div>
+
+{% endblock main %}
